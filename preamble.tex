@@ -100,7 +100,7 @@
 \usepackage{soul} % Модификаторы начертания
 
 \usepackage{hyperref}
-\usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor}
+\usepackage[usenames,dvipsnames,svgnames,table,rgb,pdftex,dvipsnames]{xcolor}
 \hypersetup{				% Гиперссылки
     unicode=true,           % русские буквы в раздела PDF
     pdftitle={Заголовок},   % Заголовок
@@ -168,6 +168,11 @@
 \pgfplotsset{compat=1.16}
 \renewcommand{\thesection}{}
 \renewcommand{\thesubsection}{\arabic{subsection}}
+
+\usepackage{marginnote}
+\usepackage{xargs}
+\usepackage[colorinlistoftodos,prependcaption,shadow, textwidth=3cm]{todonotes}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
 %%\setcounter{secnumdepth}{0}
 %%% Local Variables:
 %%% mode: latex
